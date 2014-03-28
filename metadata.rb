@@ -3,7 +3,7 @@ maintainer        'Opscode, Inc.'
 maintainer_email  'cookbooks@opscode.com'
 license           'Apache 2.0'
 description       'Installs and configures nginx'
-version           '2.5.1'
+version           '2.5.2'
 
 recipe 'nginx',         'Installs nginx package and sets up configuration with Debian apache style with sites-enabled/sites-available'
 recipe 'nginx::source', 'Installs nginx from source and sets up configuration with Debian apache style with sites-enabled/sites-available'
@@ -13,7 +13,8 @@ depends 'bluepill',        '~> 2.3'
 depends 'build-essential', '~> 2.0'
 depends 'ohai',            '~> 1.1'
 depends 'runit',           '~> 1.2'
-depends 'yum-epel',        '~> 0.3'
+
+suggests 'yum-epel',        '~> 0.3'
 
 supports 'amazon'
 supports 'centos'
